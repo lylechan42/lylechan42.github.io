@@ -32,7 +32,7 @@ github:
   username: lylechan42 # change to your github username
 
 twitter:
-  username: LucienCurorca # change to your twitter username
+  username: Bazinga # change to your twitter username
 
 social:
   # Change to your full name.
@@ -41,7 +41,7 @@ social:
   email: lylechan42@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/LucienCurorca # change to your twitter homepage
+    - https://twitter.com/Bazinga # change to your twitter homepage
     - https://github.com/lylechan42 # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
