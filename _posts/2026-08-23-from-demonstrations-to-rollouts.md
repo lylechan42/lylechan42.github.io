@@ -51,6 +51,9 @@ but is not evidence for the technical claims below.
   .rollout-bridge-loop--desktop { aspect-ratio: 1200 / 780; }
   .rollout-bridge-loop--mobile { aspect-ratio: 720 / 1260; }
   .rollout-bridge-learning-stage { aspect-ratio: 16 / 9; border-radius: 1rem; overflow: hidden; }
+  .table-wrapper {
+    overflow: visible !important;
+  }
   .table-wrapper > table.rollout-comparison-table,
   .table-wrapper > table.rollout-notation-table,
   .table-wrapper > table.rollout-value-factor-table {
