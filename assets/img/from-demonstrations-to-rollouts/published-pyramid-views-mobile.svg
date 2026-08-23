@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1608" viewBox="0 0 720 1608" role="img" aria-labelledby="title desc">
+  <title id="title">Three published robot-data pyramid views</title>
+  <desc id="desc">Three stacked schematic mini-pyramids summarize published robot-data views from NVIDIA GR00T N1, Tanay Jaipuria, and a survey by Ye and colleagues.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fcfaf5"/>
+      <stop offset="1" stop-color="#f0ebe2"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-20%" width="130%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#192338" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="720" height="1608" rx="34" fill="url(#paper)"/>
+  <rect x="1" y="1" width="718" height="1606" rx="33" fill="none" stroke="#d9d4ca" stroke-width="2"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="44" y="68" fill="#1e293a" font-size="44" font-weight="790">Three published robot-data</text>
+    <text x="44" y="116" fill="#1e293a" font-size="44" font-weight="790">pyramid views</text>
+    <g transform="translate(44 144)">
+      <rect width="540" height="50" rx="25" fill="#f8eed9"/>
+      <circle cx="27" cy="25" r="8" fill="#d69a37"/>
+      <text x="50" y="34" fill="#825819" font-size="27" font-weight="780">ILLUSTRATIVE · NO SHARED SCALE</text>
+    </g>
+
+    <g transform="translate(44 225)" filter="url(#shadow)">
+      <rect width="632" height="360" rx="30" fill="#ffffff"/>
+      <text x="32" y="52" fill="#263247" font-size="34" font-weight="780">NVIDIA GR00T N1</text>
+      <g transform="translate(110 78)">
+        <path d="M 180 0 H 232 L 260 56 H 152 Z" fill="#f2c77e"/>
+        <text x="206" y="37" text-anchor="middle" fill="#714c17" font-size="27" font-weight="760">real robot</text>
+        <path d="M 151 64 H 261 L 298 120 H 114 Z" fill="#dcd5f3"/>
+        <text x="206" y="101" text-anchor="middle" fill="#5547aa" font-size="27" font-weight="760">synthetic</text>
+        <path d="M 113 128 H 299 L 412 198 H 0 Z" fill="#e3e8ec"/>
+        <text x="206" y="171" text-anchor="middle" fill="#39475b" font-size="27" font-weight="760">web + human video</text>
+      </g>
+      <rect x="32" y="315" width="568" height="38" rx="19" fill="#f6f2ea"/>
+      <text x="316" y="342" text-anchor="middle" fill="#5d6878" font-size="26" font-weight="660">source: GR00T N1 data pyramid</text>
+    </g>
+
+    <g transform="translate(44 610)" filter="url(#shadow)">
+      <rect width="632" height="520" rx="30" fill="#ffffff"/>
+      <text x="32" y="52" fill="#263247" font-size="34" font-weight="780">Tanay Jaipuria</text>
+      <g transform="translate(110 78)">
+        <path d="M 185 0 H 227 L 240 42 H 172 Z" fill="#f2c77e"/>
+        <text x="206" y="29" text-anchor="middle" fill="#714c17" font-size="25" font-weight="760">deployment</text>
+        <path d="M 171 48 H 241 L 260 90 H 152 Z" fill="#cdeae6"/>
+        <text x="206" y="77" text-anchor="middle" fill="#126e6b" font-size="25" font-weight="760">teleop</text>
+        <path d="M 151 96 H 261 L 280 138 H 132 Z" fill="#dcd5f3"/>
+        <text x="206" y="125" text-anchor="middle" fill="#5547aa" font-size="25" font-weight="760">simulation</text>
+        <path d="M 131 144 H 281 L 300 186 H 112 Z" fill="#e8e2f6"/>
+        <text x="206" y="173" text-anchor="middle" fill="#5547aa" font-size="25" font-weight="760">handheld</text>
+        <path d="M 111 192 H 301 L 320 234 H 92 Z" fill="#dff2ef"/>
+        <text x="206" y="221" text-anchor="middle" fill="#216f6c" font-size="25" font-weight="760">enriched ego</text>
+        <path d="M 91 240 H 321 L 340 282 H 72 Z" fill="#e7ecef"/>
+        <text x="206" y="269" text-anchor="middle" fill="#465469" font-size="25" font-weight="760">ego</text>
+        <path d="M 71 288 H 341 L 412 338 H 0 Z" fill="#dfe4e8"/>
+        <text x="206" y="319" text-anchor="middle" fill="#39475b" font-size="25" font-weight="760">internet</text>
+      </g>
+      <rect x="32" y="462" width="568" height="40" rx="20" fill="#f6f2ea"/>
+      <text x="316" y="491" text-anchor="middle" fill="#5d6878" font-size="26" font-weight="660">source: The Data Pyramid in Robotics</text>
+    </g>
+
+    <g transform="translate(44 1155)" filter="url(#shadow)">
+      <rect width="632" height="420" rx="30" fill="#ffffff"/>
+      <text x="32" y="52" fill="#263247" font-size="34" font-weight="780">Ye et al. survey</text>
+      <g transform="translate(110 78)">
+        <path d="M 180 0 H 232 L 251 46 H 161 Z" fill="#f2c77e"/>
+        <text x="206" y="32" text-anchor="middle" fill="#714c17" font-size="26" font-weight="760">robot</text>
+        <path d="M 160 52 H 252 L 275 98 H 137 Z" fill="#e8e2f6"/>
+        <text x="206" y="84" text-anchor="middle" fill="#5547aa" font-size="26" font-weight="760">UMI</text>
+        <path d="M 136 104 H 276 L 299 150 H 113 Z" fill="#dff2ef"/>
+        <text x="206" y="136" text-anchor="middle" fill="#216f6c" font-size="26" font-weight="760">ego</text>
+        <path d="M 112 156 H 300 L 323 202 H 89 Z" fill="#dcd5f3"/>
+        <text x="206" y="188" text-anchor="middle" fill="#5547aa" font-size="26" font-weight="760">simulation</text>
+        <path d="M 88 208 H 324 L 412 254 H 0 Z" fill="#dfe4e8"/>
+        <text x="206" y="240" text-anchor="middle" fill="#39475b" font-size="26" font-weight="760">general</text>
+      </g>
+      <rect x="32" y="366" width="568" height="40" rx="20" fill="#f6f2ea"/>
+      <text x="316" y="395" text-anchor="middle" fill="#5d6878" font-size="26" font-weight="660">source: Ye et al. robot-data survey</text>
+    </g>
+  </g>
+</svg>

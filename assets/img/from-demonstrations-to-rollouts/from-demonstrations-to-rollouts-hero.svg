@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="840" viewBox="0 0 1600 840" role="img" aria-labelledby="title desc">
+  <title id="title">Robot data is a map, not a ladder</title>
+  <desc id="desc">A categorical two-by-two map separates who acts from where the world responds. Columns distinguish expert or exogenous actors from the target policy. Rows distinguish real from simulated worlds. The simulated target-policy cell has a light teal emphasis.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fcfaf5"/>
+      <stop offset="0.58" stop-color="#f6f2e9"/>
+      <stop offset="1" stop-color="#ece8df"/>
+    </linearGradient>
+    <linearGradient id="focus" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#edf8f6"/>
+      <stop offset="1" stop-color="#dcefeb"/>
+    </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#26354a" opacity="0.08"/>
+    </pattern>
+    <filter id="shadow" x="-18%" y="-24%" width="136%" height="160%">
+      <feDropShadow dx="0" dy="11" stdDeviation="15" flood-color="#192338" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="840" rx="42" fill="url(#paper)"/>
+  <rect x="1" y="1" width="1598" height="838" rx="41" fill="none" stroke="#d9d4ca" stroke-width="2"/>
+  <rect width="1600" height="840" rx="42" fill="url(#grid)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="800" y="78" text-anchor="middle" fill="#1e293a" font-size="64" font-weight="790" letter-spacing="-1.6">Robot data is a map, not a ladder</text>
+    <text x="800" y="127" text-anchor="middle" fill="#687386" font-size="28">Ask who acts—and where the world responds.</text>
+
+    <g transform="translate(312 168)">
+      <rect width="548" height="72" rx="27" fill="#eeeaf9"/>
+      <circle cx="39" cy="36" r="11" fill="#6f5bd3"/>
+      <text x="70" y="47" fill="#5547aa" font-size="31" font-weight="760">EXPERT / EXOGENOUS</text>
+    </g>
+    <g transform="translate(884 168)">
+      <rect width="548" height="72" rx="27" fill="#e4f3f1"/>
+      <circle cx="39" cy="36" r="11" fill="#168d89"/>
+      <text x="70" y="47" fill="#166f6b" font-size="31" font-weight="760">TARGET POLICY</text>
+    </g>
+
+    <g transform="translate(72 263)">
+      <rect width="208" height="194" rx="28" fill="#ffffff" opacity="0.96"/>
+      <circle cx="104" cy="45" r="13" fill="#d5a13a"/>
+      <text x="104" y="104" text-anchor="middle" fill="#344054" font-size="30" font-weight="770">REAL</text>
+      <text x="104" y="142" text-anchor="middle" fill="#344054" font-size="30" font-weight="770">WORLD</text>
+    </g>
+    <g transform="translate(72 487)">
+      <rect width="208" height="194" rx="28" fill="#ffffff" opacity="0.96"/>
+      <rect x="91" y="32" width="26" height="26" rx="6" fill="#6f5bd3"/>
+      <text x="104" y="104" text-anchor="middle" fill="#344054" font-size="28" font-weight="770">SIMULATED</text>
+      <text x="104" y="142" text-anchor="middle" fill="#344054" font-size="30" font-weight="770">WORLD</text>
+    </g>
+
+    <g transform="translate(312 263)" filter="url(#shadow)">
+      <rect width="548" height="194" rx="30" fill="#ffffff"/>
+      <rect width="11" height="194" rx="5.5" fill="#6f5bd3"/>
+      <text x="42" y="68" fill="#5b4bb5" font-size="26" font-weight="760" letter-spacing="1">REAL · TEACHER-GENERATED</text>
+      <text x="42" y="129" fill="#253146" font-size="43" font-weight="770">Captured behavior</text>
+    </g>
+    <g transform="translate(884 263)" filter="url(#shadow)">
+      <rect width="548" height="194" rx="30" fill="#ffffff"/>
+      <rect width="11" height="194" rx="5.5" fill="#168d89"/>
+      <text x="42" y="68" fill="#137873" font-size="26" font-weight="760" letter-spacing="1">REAL · TARGET POLICY</text>
+      <text x="42" y="129" fill="#253146" font-size="43" font-weight="770">Real rollouts</text>
+    </g>
+    <g transform="translate(312 487)" filter="url(#shadow)">
+      <rect width="548" height="194" rx="30" fill="#ffffff"/>
+      <rect width="11" height="194" rx="5.5" fill="#6f5bd3"/>
+      <text x="42" y="68" fill="#5b4bb5" font-size="26" font-weight="760" letter-spacing="1">SIM · TEACHER-GENERATED</text>
+      <text x="42" y="129" fill="#253146" font-size="42" font-weight="770">Synthetic demos</text>
+    </g>
+    <g transform="translate(884 487)" filter="url(#shadow)">
+      <rect x="1.5" y="1.5" width="545" height="191" rx="28.5" fill="url(#focus)" stroke="#168d89" stroke-width="3"/>
+      <rect width="11" height="194" rx="5.5" fill="#168d89"/>
+      <text x="42" y="68" fill="#137873" font-size="26" font-weight="760" letter-spacing="1">SIM · TARGET POLICY</text>
+      <text x="42" y="129" fill="#253146" font-size="42" font-weight="770">Sim rollouts</text>
+    </g>
+
+    <g transform="translate(312 722)">
+      <rect width="1120" height="72" rx="24" fill="#ffffff" opacity="0.96"/>
+      <text x="34" y="46" fill="#263247" font-size="26" font-weight="720">Columns: who acts</text>
+      <circle cx="385" cy="36" r="6" fill="#aab2bf"/>
+      <text x="420" y="46" fill="#263247" font-size="26" font-weight="720">Rows: world response</text>
+      <circle cx="806" cy="36" r="6" fill="#aab2bf"/>
+      <text x="840" y="46" fill="#566377" font-size="25" font-weight="600">categories, not ranks</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1260" viewBox="0 0 720 1260" role="img" aria-labelledby="title desc">
+  <title id="title">Mobile closed-loop divergence diagram</title>
+  <desc id="desc">One frozen policy contract feeds a real loop and a simulated loop. Each observes, acts, and changes the world. Different observations and transitions make the two trajectories diverge.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fcfaf5"/>
+      <stop offset="1" stop-color="#f0ebe2"/>
+    </linearGradient>
+    <linearGradient id="contract" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#26374f"/>
+      <stop offset="1" stop-color="#172338"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-20%" width="130%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#192338" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrowReal" viewBox="0 0 10 10" refX="8.4" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#168d89"/>
+    </marker>
+    <marker id="arrowSim" viewBox="0 0 10 10" refX="8.4" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6f5bd3"/>
+    </marker>
+  </defs>
+
+  <rect width="720" height="1260" rx="34" fill="url(#paper)"/>
+  <rect x="1" y="1" width="718" height="1258" rx="33" fill="none" stroke="#d9d4ca" stroke-width="2"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="44" y="70" fill="#1e293a" font-size="46" font-weight="780">Same policy.</text>
+    <text x="44" y="120" fill="#1e293a" font-size="46" font-weight="780">Two closed loops.</text>
+
+    <g transform="translate(44 159)" filter="url(#shadow)">
+      <rect width="632" height="166" rx="30" fill="url(#contract)"/>
+      <circle cx="52" cy="52" r="24" fill="#168d89"/>
+      <path d="M 42 54 C 47 41, 57 41, 62 54 M 45 62 H 59" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+      <text x="91" y="48" fill="#92d7d0" font-size="28" font-weight="780">ONE FROZEN CONTRACT</text>
+      <text x="316" y="105" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="700">checkpoint · preprocessing</text>
+      <text x="316" y="142" text-anchor="middle" fill="#c9d3df" font-size="28">decoder · wrapper · runtime</text>
+    </g>
+
+    <path d="M 360 325 V 365" stroke="#566377" stroke-width="4"/>
+
+    <g transform="translate(44 365)" filter="url(#shadow)">
+      <rect width="632" height="310" rx="30" fill="#ffffff"/>
+      <rect width="632" height="10" rx="5" fill="#168d89"/>
+      <text x="32" y="57" fill="#137873" font-size="30" font-weight="780" letter-spacing="1">REAL LOOP</text>
+      <g transform="translate(32 89)">
+        <rect width="154" height="90" rx="22" fill="#e6f4f2"/>
+        <text x="77" y="56" text-anchor="middle" fill="#137873" font-size="30" font-weight="740">Observe</text>
+        <path d="M 167 45 H 204" stroke="#168d89" stroke-width="4" marker-end="url(#arrowReal)"/>
+        <rect x="218" width="132" height="90" rx="22" fill="#e6f4f2"/>
+        <text x="284" y="56" text-anchor="middle" fill="#137873" font-size="30" font-weight="740">Act</text>
+        <path d="M 363 45 H 400" stroke="#168d89" stroke-width="4" marker-end="url(#arrowReal)"/>
+        <rect x="414" width="154" height="90" rx="22" fill="#e6f4f2"/>
+        <text x="491" y="56" text-anchor="middle" fill="#137873" font-size="30" font-weight="740">World</text>
+      </g>
+      <path d="M 523 197 C 523 242, 109 242, 109 203" fill="none" stroke="#168d89" stroke-width="4" stroke-dasharray="10 10" marker-end="url(#arrowReal)"/>
+      <text x="32" y="275" fill="#334157" font-size="28" font-weight="700">Real pixels · latency · contact</text>
+    </g>
+
+    <path d="M 360 675 V 709" stroke="#566377" stroke-width="4"/>
+
+    <g transform="translate(44 709)" filter="url(#shadow)">
+      <rect width="632" height="310" rx="30" fill="#ffffff"/>
+      <rect width="632" height="10" rx="5" fill="#6f5bd3"/>
+      <text x="32" y="57" fill="#5b4bb5" font-size="30" font-weight="780" letter-spacing="1">SIMULATED LOOP</text>
+      <g transform="translate(32 89)">
+        <rect width="154" height="90" rx="22" fill="#f0edf9"/>
+        <text x="77" y="56" text-anchor="middle" fill="#5b4bb5" font-size="30" font-weight="740">Observe</text>
+        <path d="M 167 45 H 204" stroke="#6f5bd3" stroke-width="4" marker-end="url(#arrowSim)"/>
+        <rect x="218" width="132" height="90" rx="22" fill="#f0edf9"/>
+        <text x="284" y="56" text-anchor="middle" fill="#5b4bb5" font-size="30" font-weight="740">Act</text>
+        <path d="M 363 45 H 400" stroke="#6f5bd3" stroke-width="4" marker-end="url(#arrowSim)"/>
+        <rect x="414" width="154" height="90" rx="22" fill="#f0edf9"/>
+        <text x="491" y="56" text-anchor="middle" fill="#5b4bb5" font-size="30" font-weight="740">World</text>
+      </g>
+      <path d="M 523 197 C 523 242, 109 242, 109 203" fill="none" stroke="#6f5bd3" stroke-width="4" stroke-dasharray="10 10" marker-end="url(#arrowSim)"/>
+      <text x="32" y="275" fill="#334157" font-size="28" font-weight="700">Rendered pixels · simulated physics</text>
+    </g>
+
+    <g transform="translate(44 1061)">
+      <rect width="632" height="154" rx="30" fill="#202c3f"/>
+      <circle cx="40" cy="40" r="10" fill="#d69a37"/>
+      <circle cx="592" cy="40" r="10" fill="#d75d55"/>
+      <text x="316" y="51" text-anchor="middle" fill="#ffffff" font-size="36" font-weight="760">same weights ≠ same path</text>
+      <text x="316" y="99" text-anchor="middle" fill="#c2cad6" font-size="28">Different observations change actions.</text>
+      <text x="316" y="132" text-anchor="middle" fill="#c2cad6" font-size="28">Different actions change later states.</text>
+    </g>
+  </g>
+</svg>

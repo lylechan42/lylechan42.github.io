@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">Closed-loop divergence between simulation and reality</title>
+  <desc id="desc">One frozen policy checkpoint branches into real and simulated loops. Different observation operators produce different observations and actions; different transition dynamics produce different next states. The trajectories separate over time even though the serialized policy is unchanged.</desc>
+  <defs>
+    <style>
+      .math { font-family: 'STIX Two Math', 'Cambria Math', 'Noto Sans Math', 'DejaVu Math TeX Gyre', 'Times New Roman', 'Liberation Serif', 'FreeSerif', serif; font-weight: 400; }
+      .mi { font-style: italic; }
+      .mo, .mathrm { font-style: normal; }
+    </style>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fcfaf5"/>
+      <stop offset="1" stop-color="#f1ece3"/>
+    </linearGradient>
+    <linearGradient id="contract" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#26374f"/>
+      <stop offset="1" stop-color="#182338"/>
+    </linearGradient>
+    <filter id="shadow" x="-16%" y="-22%" width="132%" height="155%">
+      <feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#192338" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrowReal" viewBox="0 0 10 10" refX="8.4" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#168d89"/>
+    </marker>
+    <marker id="arrowSim" viewBox="0 0 10 10" refX="8.4" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6f5bd3"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="780" rx="36" fill="url(#paper)"/>
+  <rect x="1" y="1" width="1198" height="778" rx="35" fill="none" stroke="#d9d4ca" stroke-width="2"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="65" y="66" fill="#1e293a" font-size="32" font-weight="780">Same policy. Two closed loops.</text>
+    <text x="65" y="103" fill="#697487" font-size="18">An unchanged checkpoint does not imply unchanged actions—or an unchanged trajectory.</text>
+
+    <g transform="translate(320 130)" filter="url(#shadow)">
+      <rect width="560" height="132" rx="28" fill="url(#contract)"/>
+      <circle cx="48" cy="66" r="27" fill="#168d89"/>
+      <path d="M 37 68 C 43 52, 55 52, 61 68 M 41 77 H 57" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+      <text x="92" y="42" fill="#8fd1ca" font-size="14" font-weight="760" letter-spacing="1.45">ONE FROZEN POLICY CONTRACT</text>
+      <text x="92" y="77" fill="#ffffff" font-size="19" font-weight="690">checkpoint · preprocessing · decoder</text>
+      <text x="92" y="105" fill="#d5dce6" font-size="19" font-weight="650">wrapper · runtime</text>
+    </g>
+
+    <path d="M 600 264 C 560 282, 450 285, 358 308" fill="none" stroke="#168d89" stroke-width="3" marker-end="url(#arrowReal)"/>
+    <path d="M 600 264 C 640 282, 750 285, 842 308" fill="none" stroke="#6f5bd3" stroke-width="3" marker-end="url(#arrowSim)"/>
+
+    <g transform="translate(65 300)">
+      <rect width="505" height="342" rx="30" fill="#ffffff" filter="url(#shadow)"/>
+      <rect width="505" height="8" rx="4" fill="#168d89"/>
+      <text x="28" y="48" fill="#137873" font-size="15" font-weight="760" letter-spacing="1.55">REAL LOOP</text>
+      <text x="388" y="48" fill="#73908e" font-size="15" font-weight="680">trajectory <tspan class="math mi" font-size="17">τ</tspan><tspan class="math mathrm" font-size="11" baseline-shift="super">R</tspan></text>
+
+      <g transform="translate(28 81)">
+        <rect width="122" height="74" rx="19" fill="#e8f5f3"/>
+        <text x="61" y="31" text-anchor="middle" fill="#137873" font-size="17" font-weight="760">Observe</text>
+        <text x="61" y="55" text-anchor="middle" fill="#376c69" font-size="16" class="math"><tspan class="mi">o</tspan><tspan class="mi" font-size="11" baseline-shift="sub">t</tspan><tspan class="mathrm" font-size="11" baseline-shift="super">R</tspan><tspan class="mo" baseline-shift="baseline"> = </tspan><tspan class="mathrm">O</tspan><tspan class="mathrm" font-size="11" baseline-shift="sub">R</tspan><tspan class="mo" baseline-shift="baseline">(</tspan><tspan class="mi">s</tspan><tspan class="mi" font-size="11" baseline-shift="sub">t</tspan><tspan class="mathrm" font-size="11" baseline-shift="super">R</tspan><tspan class="mo" baseline-shift="baseline">)</tspan></text>
+
+        <path d="M 132 37 H 169" stroke="#168d89" stroke-width="3" marker-end="url(#arrowReal)"/>
+        <rect x="180" width="112" height="74" rx="19" fill="#e8f5f3"/>
+        <text x="236" y="31" text-anchor="middle" fill="#137873" font-size="17" font-weight="760">Act</text>
+        <text x="236" y="55" text-anchor="middle" fill="#376c69" font-size="16" class="math"><tspan class="mi">a</tspan><tspan class="mi" font-size="11" baseline-shift="sub">t</tspan><tspan class="mathrm" font-size="11" baseline-shift="super">R</tspan><tspan class="mo" baseline-shift="baseline"> = </tspan><tspan class="mi">π</tspan><tspan class="mi" font-size="11" baseline-shift="sub">θ</tspan><tspan class="mo" baseline-shift="baseline">(</tspan><tspan class="mi">o</tspan><tspan class="mi" font-size="11" baseline-shift="sub">t</tspan><tspan class="mathrm" font-size="11" baseline-shift="super">R</tspan><tspan class="mo" baseline-shift="baseline">)</tspan></text>
+
+        <path d="M 302 37 H 339" stroke="#168d89" stroke-width="3" marker-end="url(#arrowReal)"/>
+        <rect x="350" width="99" height="74" rx="19" fill="#e8f5f3"/>
+        <text x="399.5" y="31" text-anchor="middle" fill="#137873" font-size="17" font-weight="760">World</text>
+        <text x="399.5" y="55" text-anchor="middle" fill="#376c69" font-size="18" class="math"><tspan class="mathrm">P</tspan><tspan class="mathrm" font-size="12" baseline-shift="sub">R</tspan></text>
+
+        <path d="M 399 84 C 399 130, 62 132, 62 97" fill="none" stroke="#168d89" stroke-width="2.5" stroke-dasharray="7 7" marker-end="url(#arrowReal)"/>
+      </g>
+
+      <g transform="translate(28 228)">
+        <circle cx="17" cy="18" r="8" fill="#168d89"/>
+        <text x="38" y="24" fill="#334157" font-size="17" font-weight="680">Real images, latency, contacts, slips</text>
+        <text x="38" y="52" fill="#6c7788" font-size="15">produce the next state <tspan class="math mi" font-size="16">s</tspan><tspan class="math mi" font-size="11" baseline-shift="sub">t</tspan><tspan class="math mo" font-size="11" baseline-shift="sub">+1</tspan><tspan class="math mathrm" font-size="11" baseline-shift="super">R</tspan><tspan baseline-shift="baseline">.</tspan></text>
+        <path d="M 17 76 H 425" stroke="#cae5e2" stroke-width="7" stroke-linecap="round"/>
+        <path d="M 17 76 C 139 78, 283 95, 425 126" fill="none" stroke="#168d89" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="425" cy="126" r="8" fill="#168d89"/>
+      </g>
+    </g>
+
+    <g transform="translate(630 300)">
+      <rect width="505" height="342" rx="30" fill="#ffffff" filter="url(#shadow)"/>
+      <rect width="505" height="8" rx="4" fill="#6f5bd3"/>
+      <text x="28" y="48" fill="#5b4bb5" font-size="15" font-weight="760" letter-spacing="1.55">SIMULATED LOOP</text>
+      <text x="388" y="48" fill="#847ca7" font-size="15" font-weight="680">trajectory <tspan class="math mi" font-size="17">τ</tspan><tspan class="math mathrm" font-size="11" baseline-shift="super">S</tspan></text>
+
+      <g transform="translate(28 81)">
+        <rect width="122" height="74" rx="19" fill="#f0edf9"/>
+        <text x="61" y="31" text-anchor="middle" fill="#5b4bb5" font-size="17" font-weight="760">Observe</text>
+        <text x="61" y="55" text-anchor="middle" fill="#655d8d" font-size="16" class="math"><tspan class="mi">o</tspan><tspan class="mi" font-size="11" baseline-shift="sub">t</tspan><tspan class="mathrm" font-size="11" baseline-shift="super">S</tspan><tspan class="mo" baseline-shift="baseline"> = </tspan><tspan class="mathrm">O</tspan><tspan class="mathrm" font-size="11" baseline-shift="sub">S</tspan><tspan class="mo" baseline-shift="baseline">(</tspan><tspan class="mi">s</tspan><tspan class="mi" font-size="11" baseline-shift="sub">t</tspan><tspan class="mathrm" font-size="11" baseline-shift="super">S</tspan><tspan class="mo" baseline-shift="baseline">)</tspan></text>
+
+        <path d="M 132 37 H 169" stroke="#6f5bd3" stroke-width="3" marker-end="url(#arrowSim)"/>
+        <rect x="180" width="112" height="74" rx="19" fill="#f0edf9"/>
+        <text x="236" y="31" text-anchor="middle" fill="#5b4bb5" font-size="17" font-weight="760">Act</text>
+        <text x="236" y="55" text-anchor="middle" fill="#655d8d" font-size="16" class="math"><tspan class="mi">a</tspan><tspan class="mi" font-size="11" baseline-shift="sub">t</tspan><tspan class="mathrm" font-size="11" baseline-shift="super">S</tspan><tspan class="mo" baseline-shift="baseline"> = </tspan><tspan class="mi">π</tspan><tspan class="mi" font-size="11" baseline-shift="sub">θ</tspan><tspan class="mo" baseline-shift="baseline">(</tspan><tspan class="mi">o</tspan><tspan class="mi" font-size="11" baseline-shift="sub">t</tspan><tspan class="mathrm" font-size="11" baseline-shift="super">S</tspan><tspan class="mo" baseline-shift="baseline">)</tspan></text>
+
+        <path d="M 302 37 H 339" stroke="#6f5bd3" stroke-width="3" marker-end="url(#arrowSim)"/>
+        <rect x="350" width="99" height="74" rx="19" fill="#f0edf9"/>
+        <text x="399.5" y="31" text-anchor="middle" fill="#5b4bb5" font-size="17" font-weight="760">World</text>
+        <text x="399.5" y="55" text-anchor="middle" fill="#655d8d" font-size="18" class="math"><tspan class="mathrm">P</tspan><tspan class="mathrm" font-size="12" baseline-shift="sub">S</tspan></text>
+
+        <path d="M 399 84 C 399 130, 62 132, 62 97" fill="none" stroke="#6f5bd3" stroke-width="2.5" stroke-dasharray="7 7" marker-end="url(#arrowSim)"/>
+      </g>
+
+      <g transform="translate(28 228)">
+        <circle cx="17" cy="18" r="8" fill="#6f5bd3"/>
+        <text x="38" y="24" fill="#334157" font-size="17" font-weight="680">Rendered pixels, timing, simulated physics</text>
+        <text x="38" y="52" fill="#6c7788" font-size="15">produce the next state <tspan class="math mi" font-size="16">s</tspan><tspan class="math mi" font-size="11" baseline-shift="sub">t</tspan><tspan class="math mo" font-size="11" baseline-shift="sub">+1</tspan><tspan class="math mathrm" font-size="11" baseline-shift="super">S</tspan><tspan baseline-shift="baseline">.</tspan></text>
+        <path d="M 17 76 H 425" stroke="#ddd8ef" stroke-width="7" stroke-linecap="round"/>
+        <path d="M 17 76 C 150 75, 286 63, 425 38" fill="none" stroke="#6f5bd3" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="425" cy="38" r="8" fill="#6f5bd3"/>
+      </g>
+    </g>
+
+    <g transform="translate(212 686)">
+      <rect width="776" height="68" rx="22" fill="#202c3f"/>
+      <text x="388" y="29" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="720">same weights ≠ same trajectory</text>
+      <text x="388" y="51" text-anchor="middle" fill="#b7c0ce" font-size="15">Earlier observation and transition errors change later actions and states.</text>
+      <circle cx="34" cy="34" r="8" fill="#d69a37"/>
+      <circle cx="742" cy="34" r="8" fill="#d75d55"/>
+    </g>
+  </g>
+</svg>

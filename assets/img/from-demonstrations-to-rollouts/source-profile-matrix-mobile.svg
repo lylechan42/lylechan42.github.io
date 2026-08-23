@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="2340" viewBox="0 0 720 2340" role="img" aria-labelledby="title desc">
+  <title id="title">Mobile source-profile comparison matrix</title>
+  <desc id="desc">A stacked mobile comparison of eight robot-data sources. Action grounding and collection burden share one blue scale, with darker color meaning greater burden. Actor mismatch and world mismatch share one green-to-teal scale, with darker color meaning farther from the target under a rough default order.</desc>
+  <defs>
+    <style>
+      .math { font-family: 'STIX Two Math', 'Cambria Math', 'Noto Sans Math', 'DejaVu Math TeX Gyre', serif; font-style: italic; }
+      .burden-low { fill: #e7f0f5; }
+      .burden-low-medium { fill: #d3e3ec; }
+      .burden-medium { fill: #acc8d9; }
+      .burden-high { fill: #76a0bb; }
+      .burden-maximum { fill: #4f7c9b; }
+      .mismatch-low { fill: #dff0e8; }
+      .mismatch-medium { fill: #8fc0a9; }
+      .mismatch-high { fill: #3f736b; }
+      .on-mismatch-dark { fill: #ffffff; }
+      .mismatch-low + text,
+      .mismatch-low + text + text,
+      .mismatch-medium + text,
+      .mismatch-medium + text + text { fill: #1d4039; }
+      .on-maximum { fill: #ffffff; }
+    </style>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fcfaf5"/>
+      <stop offset="1" stop-color="#f0ebe2"/>
+    </linearGradient>
+    <linearGradient id="burden-scale" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e7f0f5"/>
+      <stop offset="0.5" stop-color="#acc8d9"/>
+      <stop offset="1" stop-color="#4f7c9b"/>
+    </linearGradient>
+    <linearGradient id="mismatch-scale" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#dff0e8"/>
+      <stop offset="0.5" stop-color="#8fc0a9"/>
+      <stop offset="1" stop-color="#3f736b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="2340" rx="34" fill="url(#paper)"/>
+  <rect x="1" y="1" width="718" height="2338" rx="33" fill="none" stroke="#d9d4ca" stroke-width="2"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="44" y="70" fill="#1e293a" font-size="46" font-weight="790">One profile, four questions</text>
+    <text x="44" y="116" fill="#687386" font-size="28">Compare within a column.</text>
+    <text x="44" y="151" fill="#687386" font-size="28">There is no combined score.</text>
+
+    <!-- Internet video -->
+    <g transform="translate(44 205)">
+      <text x="0" y="34" fill="#263247" font-size="31" font-weight="760">Internet video</text>
+      <rect class="burden-maximum" y="52" width="304" height="70" rx="20"/>
+      <text class="math on-maximum" x="18" y="80" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">A</tspan></text>
+      <text class="on-maximum" x="18" y="108" font-size="27" font-weight="720">Unobserved</text>
+      <rect class="mismatch-medium" x="320" y="52" width="312" height="70" rx="20"/>
+      <text class="math on-mismatch-dark" x="338" y="80" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">B</tspan></text>
+      <text class="on-mismatch-dark" x="338" y="108" font-size="27" font-weight="720">Human / mixed</text>
+      <rect class="mismatch-medium" y="132" width="304" height="70" rx="20"/>
+      <text class="math on-mismatch-dark" x="18" y="160" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">W</tspan></text>
+      <text class="on-mismatch-dark" x="18" y="188" font-size="27" font-weight="720">Other real</text>
+      <rect class="burden-low" x="320" y="132" width="312" height="70" rx="20"/>
+      <text x="338" y="160" fill="#263247" font-size="20" font-weight="760">C</text>
+      <text x="338" y="188" fill="#263247" font-size="27" font-weight="720">Low*</text>
+    </g>
+
+    <!-- Egocentric video -->
+    <g transform="translate(44 460)">
+      <text x="0" y="34" fill="#263247" font-size="31" font-weight="760">Egocentric video</text>
+      <rect class="burden-high" y="52" width="304" height="70" rx="20"/>
+      <text x="18" y="80" fill="#263247" class="math" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">A</tspan></text>
+      <text x="18" y="108" fill="#263247" font-size="27" font-weight="720">Inferred</text>
+      <rect class="mismatch-medium" x="320" y="52" width="312" height="70" rx="20"/>
+      <text class="math on-mismatch-dark" x="338" y="80" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">B</tspan></text>
+      <text class="on-mismatch-dark" x="338" y="108" font-size="27" font-weight="720">Human</text>
+      <rect class="mismatch-medium" y="132" width="304" height="70" rx="20"/>
+      <text class="math on-mismatch-dark" x="18" y="160" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">W</tspan></text>
+      <text class="on-mismatch-dark" x="18" y="188" font-size="27" font-weight="720">Other real</text>
+      <rect class="burden-low-medium" x="320" y="132" width="312" height="70" rx="20"/>
+      <text x="338" y="160" fill="#263247" font-size="20" font-weight="760">C</text>
+      <text x="338" y="188" fill="#263247" font-size="27" font-weight="720">Low–medium</text>
+    </g>
+
+    <!-- UMI -->
+    <g transform="translate(44 715)">
+      <text x="0" y="34" fill="#263247" font-size="31" font-weight="760">UMI-style capture</text>
+      <rect class="burden-medium" y="52" width="304" height="70" rx="20"/>
+      <text x="18" y="80" fill="#263247" class="math" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">A</tspan></text>
+      <text x="18" y="108" fill="#263247" font-size="27" font-weight="720">Mapped</text>
+      <rect class="mismatch-medium" x="320" y="52" width="312" height="70" rx="20"/>
+      <text class="math on-mismatch-dark" x="338" y="80" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">B</tspan></text>
+      <text class="on-mismatch-dark" x="338" y="108" font-size="27" font-weight="720">Human</text>
+      <rect class="mismatch-medium" y="132" width="304" height="70" rx="20"/>
+      <text class="math on-mismatch-dark" x="18" y="160" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">W</tspan></text>
+      <text class="on-mismatch-dark" x="18" y="188" font-size="27" font-weight="720">Other real</text>
+      <rect class="burden-medium" x="320" y="132" width="312" height="70" rx="20"/>
+      <text x="338" y="160" fill="#263247" font-size="20" font-weight="760">C</text>
+      <text x="338" y="188" fill="#263247" font-size="27" font-weight="720">Medium</text>
+    </g>
+
+    <!-- Real human teleop -->
+    <g transform="translate(44 970)">
+      <text x="0" y="34" fill="#263247" font-size="31" font-weight="760">Real human teleoperation</text>
+      <rect class="burden-low" y="52" width="304" height="70" rx="20"/>
+      <text x="18" y="80" fill="#263247" class="math" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">A</tspan></text>
+      <text x="18" y="108" fill="#263247" font-size="27" font-weight="720">Exact*</text>
+      <rect class="mismatch-medium" x="320" y="52" width="312" height="70" rx="20"/>
+      <text class="math on-mismatch-dark" x="338" y="80" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">B</tspan></text>
+      <text class="on-mismatch-dark" x="338" y="108" font-size="27" font-weight="720">Human</text>
+      <rect class="mismatch-low" y="132" width="304" height="70" rx="20"/>
+      <text class="math on-mismatch-dark" x="18" y="160" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">W</tspan></text>
+      <text class="on-mismatch-dark" x="18" y="188" font-size="27" font-weight="720">Target real*</text>
+      <rect class="burden-high" x="320" y="132" width="312" height="70" rx="20"/>
+      <text x="338" y="160" fill="#263247" font-size="20" font-weight="760">C</text>
+      <text x="338" y="188" fill="#263247" font-size="27" font-weight="720">High</text>
+    </g>
+
+    <!-- Sim script/planner -->
+    <g transform="translate(44 1225)">
+      <text x="0" y="34" fill="#263247" font-size="31" font-weight="760">Simulated script / planner</text>
+      <rect class="burden-low" y="52" width="304" height="70" rx="20"/>
+      <text x="18" y="80" fill="#263247" class="math" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">A</tspan></text>
+      <text x="18" y="108" fill="#263247" font-size="27" font-weight="720">Exact*</text>
+      <rect class="mismatch-high" x="320" y="52" width="312" height="70" rx="20"/>
+      <text class="math on-mismatch-dark" x="338" y="80" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">B</tspan></text>
+      <text class="on-mismatch-dark" x="338" y="108" font-size="27" font-weight="720">Script / planner</text>
+      <rect class="mismatch-high" y="132" width="304" height="70" rx="20"/>
+      <text class="math on-mismatch-dark" x="18" y="160" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">W</tspan></text>
+      <text class="on-mismatch-dark" x="18" y="188" font-size="27" font-weight="720">Simulated</text>
+      <rect class="burden-low" x="320" y="132" width="312" height="70" rx="20"/>
+      <text x="338" y="160" fill="#263247" font-size="20" font-weight="760">C</text>
+      <text x="338" y="188" fill="#263247" font-size="27" font-weight="720">Low*</text>
+    </g>
+
+    <!-- Sim human teleop -->
+    <g transform="translate(44 1480)">
+      <text x="0" y="34" fill="#263247" font-size="31" font-weight="760">Simulated human teleoperation</text>
+      <rect class="burden-low" y="52" width="304" height="70" rx="20"/>
+      <text x="18" y="80" fill="#263247" class="math" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">A</tspan></text>
+      <text x="18" y="108" fill="#263247" font-size="27" font-weight="720">Exact*</text>
+      <rect class="mismatch-medium" x="320" y="52" width="312" height="70" rx="20"/>
+      <text class="math on-mismatch-dark" x="338" y="80" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">B</tspan></text>
+      <text class="on-mismatch-dark" x="338" y="108" font-size="27" font-weight="720">Human</text>
+      <rect class="mismatch-high" y="132" width="304" height="70" rx="20"/>
+      <text class="math on-mismatch-dark" x="18" y="160" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">W</tspan></text>
+      <text class="on-mismatch-dark" x="18" y="188" font-size="27" font-weight="720">Simulated</text>
+      <rect class="burden-medium" x="320" y="132" width="312" height="70" rx="20"/>
+      <text x="338" y="160" fill="#263247" font-size="20" font-weight="760">C</text>
+      <text x="338" y="188" fill="#263247" font-size="27" font-weight="720">Medium</text>
+    </g>
+
+    <!-- Real target-policy -->
+    <g transform="translate(44 1735)">
+      <text x="0" y="34" fill="#263247" font-size="31" font-weight="760">Real target-policy rollout</text>
+      <rect class="burden-low" y="52" width="304" height="70" rx="20"/>
+      <text x="18" y="80" fill="#263247" class="math" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">A</tspan></text>
+      <text x="18" y="108" fill="#263247" font-size="27" font-weight="720">Exact*</text>
+      <rect class="mismatch-low" x="320" y="52" width="312" height="70" rx="20"/>
+      <text class="math on-mismatch-dark" x="338" y="80" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">B</tspan></text>
+      <text class="on-mismatch-dark" x="338" y="108" font-size="27" font-weight="720">Target policy</text>
+      <rect class="mismatch-low" y="132" width="304" height="70" rx="20"/>
+      <text class="math on-mismatch-dark" x="18" y="160" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">W</tspan></text>
+      <text class="on-mismatch-dark" x="18" y="188" font-size="27" font-weight="720">Target real*</text>
+      <rect class="burden-high" x="320" y="132" width="312" height="70" rx="20"/>
+      <text x="338" y="160" fill="#263247" font-size="20" font-weight="760">C</text>
+      <text x="338" y="188" fill="#263247" font-size="27" font-weight="720">High</text>
+    </g>
+
+    <!-- Sim target-policy -->
+    <g transform="translate(44 1990)">
+      <text x="0" y="34" fill="#263247" font-size="31" font-weight="760">Sim target-policy rollout</text>
+      <rect class="burden-low" y="52" width="304" height="70" rx="20"/>
+      <text x="18" y="80" fill="#263247" class="math" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">A</tspan></text>
+      <text x="18" y="108" fill="#263247" font-size="27" font-weight="720">Exact*</text>
+      <rect class="mismatch-low" x="320" y="52" width="312" height="70" rx="20"/>
+      <text class="math on-mismatch-dark" x="338" y="80" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">B</tspan></text>
+      <text class="on-mismatch-dark" x="338" y="108" font-size="27" font-weight="720">Target policy</text>
+      <rect class="mismatch-high" y="132" width="304" height="70" rx="20"/>
+      <text class="math on-mismatch-dark" x="18" y="160" font-size="20" font-weight="760">D<tspan baseline-shift="sub" font-size="14">W</tspan></text>
+      <text class="on-mismatch-dark" x="18" y="188" font-size="27" font-weight="720">Simulated</text>
+      <rect class="burden-low" x="320" y="132" width="312" height="70" rx="20"/>
+      <text x="338" y="160" fill="#263247" font-size="20" font-weight="760">C</text>
+      <text x="338" y="188" fill="#263247" font-size="27" font-weight="720">Low*</text>
+    </g>
+
+    <g transform="translate(44 2205)">
+      <rect width="632" height="108" rx="24" fill="#ffffff" opacity="0.9"/>
+      <rect x="18" y="16" width="104" height="16" rx="8" fill="url(#burden-scale)"/>
+      <text x="138" y="33" fill="#354258" font-size="22" font-weight="680">One burden scale for <tspan class="math">D<tspan baseline-shift="sub" font-size="15">A</tspan></tspan> and <tspan class="math">C</tspan>.</text>
+      <rect x="18" y="65" width="121" height="18" rx="9" fill="url(#mismatch-scale)"/>
+      <text x="155" y="81" fill="#354258" font-size="22" font-weight="680">Darker = farther from target in <tspan class="math">D<tspan baseline-shift="sub" font-size="15">B</tspan></tspan> and <tspan class="math">D<tspan baseline-shift="sub" font-size="15">W</tspan></tspan>.</text>
+    </g>
+  </g>
+</svg>

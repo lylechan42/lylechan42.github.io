@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1580" viewBox="0 0 720 1580" role="img" aria-labelledby="title desc">
+  <title id="title">Mobile categorical robot data map</title>
+  <desc id="desc">A mobile categorical map groups robot data by who acts and where the world responds. It includes ego video, UMI, teleoperation, scripted and MimicGen data, planner or reinforcement-learning expert data, real target-policy rollouts, and simulated target-policy rollouts. The categories are not a quality ranking and spacing is not a measured distance.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fcfaf5"/>
+      <stop offset="1" stop-color="#f0ebe2"/>
+    </linearGradient>
+    <linearGradient id="focus" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8f5f2"/>
+      <stop offset="1" stop-color="#d9ece8"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-20%" width="130%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#192338" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="720" height="1580" rx="34" fill="url(#paper)"/>
+  <rect x="1" y="1" width="718" height="1578" rx="33" fill="none" stroke="#d9d4ca" stroke-width="2"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="44" y="68" fill="#1e293a" font-size="46" font-weight="790">A map, not a ladder</text>
+    <g transform="translate(44 98)">
+      <rect width="414" height="50" rx="25" fill="#f8eed9"/>
+      <circle cx="27" cy="25" r="8" fill="#d69a37"/>
+      <text x="50" y="34" fill="#825819" font-size="28" font-weight="780">CATEGORICAL · NOT TO SCALE</text>
+    </g>
+
+    <text x="44" y="195" fill="#354258" font-size="30" font-weight="780">WHO ACTS?</text>
+    <g transform="translate(44 216)">
+      <rect width="292" height="64" rx="22" fill="#eeeaf8"/>
+      <circle cx="28" cy="32" r="9" fill="#6f5bd3"/>
+      <text x="53" y="41" fill="#5547aa" font-size="28" font-weight="760">EXPERT</text>
+    </g>
+    <g transform="translate(356 216)">
+      <rect width="320" height="64" rx="22" fill="#dff2ef"/>
+      <circle cx="28" cy="32" r="9" fill="#168d89"/>
+      <text x="53" y="41" fill="#126e6b" font-size="28" font-weight="760">TARGET POLICY</text>
+    </g>
+
+    <g transform="translate(44 316)">
+      <rect width="632" height="56" rx="20" fill="#f8eed9"/>
+      <circle cx="31" cy="28" r="9" fill="#d69a37"/>
+      <text x="56" y="37" fill="#825819" font-size="30" font-weight="780">REAL WORLD</text>
+    </g>
+
+    <g transform="translate(44 394)" filter="url(#shadow)">
+      <rect width="632" height="200" rx="28" fill="#ffffff"/>
+      <rect width="12" height="200" rx="6" fill="#6f5bd3"/>
+      <text x="38" y="49" fill="#5b4bb5" font-size="28" font-weight="780">EXPERT-GENERATED</text>
+      <text x="38" y="98" fill="#263247" font-size="38" font-weight="760">Ego video · UMI · Teleop</text>
+      <text x="38" y="145" fill="#536176" font-size="28">Captured teacher behavior</text>
+      <text x="38" y="180" fill="#7c8695" font-size="28">Three categories—not score points.</text>
+    </g>
+
+    <g transform="translate(44 617)" filter="url(#shadow)">
+      <rect width="632" height="176" rx="28" fill="#ffffff"/>
+      <rect width="12" height="176" rx="6" fill="#168d89"/>
+      <text x="38" y="49" fill="#137873" font-size="28" font-weight="780">TARGET-POLICY-GENERATED</text>
+      <text x="38" y="100" fill="#263247" font-size="37" font-weight="760">Real policy rollouts</text>
+      <text x="38" y="145" fill="#536176" font-size="28">Lab evaluation · deployment</text>
+    </g>
+
+    <g transform="translate(44 830)">
+      <rect width="632" height="56" rx="20" fill="#eeeaf8"/>
+      <rect x="22" y="17" width="22" height="22" rx="6" fill="#6f5bd3"/>
+      <text x="58" y="37" fill="#5547aa" font-size="30" font-weight="780">SIMULATED WORLD</text>
+    </g>
+
+    <g transform="translate(44 908)" filter="url(#shadow)">
+      <rect width="632" height="206" rx="28" fill="#ffffff"/>
+      <rect width="12" height="206" rx="6" fill="#6f5bd3"/>
+      <text x="38" y="49" fill="#5b4bb5" font-size="28" font-weight="780">EXPERT-GENERATED</text>
+      <text x="38" y="98" fill="#263247" font-size="36" font-weight="760">Synthetic demonstrations</text>
+      <text x="38" y="145" fill="#536176" font-size="28">Scripted · MimicGen</text>
+      <text x="38" y="181" fill="#536176" font-size="28">Planner · RL expert</text>
+    </g>
+
+    <g transform="translate(44 1137)" filter="url(#shadow)">
+      <rect x="1.5" y="1.5" width="629" height="213" rx="28.5" fill="url(#focus)" stroke="#168d89" stroke-width="3"/>
+      <rect width="12" height="216" rx="6" fill="#168d89"/>
+      <rect x="38" y="24" width="250" height="46" rx="23" fill="#cde8e4"/>
+      <text x="163" y="56" text-anchor="middle" fill="#126e6b" font-size="28" font-weight="780">ARTICLE FOCUS</text>
+      <text x="38" y="114" fill="#137873" font-size="28" font-weight="780">TARGET-POLICY-GENERATED</text>
+      <text x="38" y="161" fill="#263247" font-size="36" font-weight="760">Sim policy rollouts</text>
+      <text x="38" y="199" fill="#536176" font-size="28">Same candidate. Simulated world.</text>
+    </g>
+
+    <g transform="translate(44 1391)">
+      <rect width="632" height="137" rx="28" fill="#202c3f"/>
+      <circle cx="35" cy="38" r="10" fill="#d69a37"/>
+      <text x="60" y="47" fill="#ffffff" font-size="29" font-weight="720">Categories describe provenance.</text>
+      <text x="60" y="86" fill="#c4ccd7" font-size="28">They do not rank data quality.</text>
+      <text x="60" y="120" fill="#c4ccd7" font-size="28">Spacing is not measured distance.</text>
+    </g>
+  </g>
+</svg>
