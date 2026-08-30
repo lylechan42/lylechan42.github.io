@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Four consequence masses and two denominators</title>
+  <desc id="desc">In the example, 65 percent of pair-task cases are abstentions, 30 percent are strictly correct choices, 2.5 percent are non-harmful-only choices, and 2.5 percent are harmful choices. Coverage is 35 percent. Among those choices, 93 percent are non-harmful and 7 percent are harmful.</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#192338" flood-opacity="0.10"/>
+    </filter>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbfaf6"/>
+      <stop offset="1" stop-color="#f2eee6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" rx="36" fill="url(#paper)"/>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="72" y="74" fill="#1d2635" font-size="31" font-weight="750">One result, two denominators</text>
+    <text x="72" y="110" fill="#687386" font-size="18">Start with all pair-task cases. Then look among the choices.</text>
+
+    <g filter="url(#shadow)">
+      <clipPath id="barClip"><rect x="72" y="158" width="1056" height="112" rx="28"/></clipPath>
+      <g clip-path="url(#barClip)">
+        <rect x="72" y="158" width="686.4" height="112" fill="#667085"/>
+        <rect x="758.4" y="158" width="316.8" height="112" fill="#168463"/>
+        <rect x="1075.2" y="158" width="26.4" height="112" fill="#39a6a0"/>
+        <rect x="1101.6" y="158" width="26.4" height="112" fill="#d75d55"/>
+      </g>
+    </g>
+    <text x="103" y="206" fill="#ffffff" font-size="15" font-weight="700" letter-spacing="1.5">ABSTAIN</text>
+    <text x="103" y="242" fill="#ffffff" font-size="29" font-weight="780">65%</text>
+    <text x="794" y="206" fill="#ffffff" font-size="15" font-weight="700" letter-spacing="1.5">STRICT</text>
+    <text x="794" y="242" fill="#ffffff" font-size="29" font-weight="780">30%</text>
+
+    <path d="M1088 276 L1048 320 L890 320" fill="none" stroke="#168d89" stroke-width="3"/>
+    <circle cx="1088" cy="276" r="5" fill="#39a6a0"/>
+    <text x="890" y="348" fill="#277a77" font-size="16" font-weight="700">NON-HARMFUL-ONLY · 2.5%</text>
+    <path d="M1115 276 L1115 364 L890 364" fill="none" stroke="#c64c45" stroke-width="3"/>
+    <circle cx="1115" cy="276" r="5" fill="#d75d55"/>
+    <text x="890" y="392" fill="#b43e38" font-size="16" font-weight="700">HARMFUL · 2.5%</text>
+
+    <g transform="translate(72 342)" filter="url(#shadow)">
+      <rect width="360" height="246" rx="28" fill="#ffffff"/>
+      <rect x="0" y="0" width="10" height="246" rx="5" fill="#6f5bd3"/>
+      <text x="42" y="55" fill="#6f5bd3" font-size="15" font-weight="750" letter-spacing="1.4">COVERAGE</text>
+      <text x="42" y="140" fill="#202a3a" font-size="78" font-weight="800">35%</text>
+      <text x="42" y="184" fill="#667085" font-size="18">of all pair-task cases</text>
+      <text x="42" y="215" fill="#667085" font-size="16">Cₒₚ = 1 − M₀</text>
+    </g>
+
+    <g transform="translate(462 430)" filter="url(#shadow)">
+      <rect width="666" height="158" rx="28" fill="#1f2938"/>
+      <text x="32" y="42" fill="#c9d1df" font-size="14" font-weight="700" letter-spacing="1.3">AMONG THE 35% CHOICES</text>
+      <text x="32" y="104" fill="#ffffff" font-size="43" font-weight="790">93%</text>
+      <text x="135" y="102" fill="#d8e0ea" font-size="20">non-harm</text>
+      <line x1="317" y1="30" x2="317" y2="128" stroke="#485366" stroke-width="2"/>
+      <text x="350" y="104" fill="#ff8d83" font-size="43" font-weight="790">7%</text>
+      <text x="432" y="102" fill="#d8e0ea" font-size="20">harm</text>
+      <rect x="32" y="127" width="574" height="5" rx="2.5" fill="#168463"/>
+      <rect x="566" y="127" width="40" height="5" rx="2.5" fill="#d75d55"/>
+    </g>
+
+    <text x="72" y="635" fill="#8a3e3a" font-size="18" font-weight="720">“93% non-harm” alone hides 65% abstention and 2.5% harm overall.</text>
+  </g>
+</svg>

@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">The policy loop and the research-decision loop</title>
+  <desc id="desc">The left panel shows a closed policy-environment loop inside simulation. The right panel shows a separate organizational loop from frozen policy candidates through protected simulation evidence, a choose or abstain action, a sealed commitment, and a protected real audit. A boundary prevents real evidence from changing the already issued action.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fcfaf5"/>
+      <stop offset="1" stop-color="#f1ece3"/>
+    </linearGradient>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#26374f"/>
+      <stop offset="1" stop-color="#182338"/>
+    </linearGradient>
+    <filter id="shadow" x="-18%" y="-24%" width="136%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#192338" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrowTeal" viewBox="0 0 10 10" refX="8.4" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#168d89"/>
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="8.4" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#6f5bd3"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="8.4" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#d69a37"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="780" rx="36" fill="url(#paper)"/>
+  <rect x="1" y="1" width="1198" height="778" rx="35" fill="none" stroke="#d9d4ca" stroke-width="2"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="60" y="66" fill="#1e293a" font-size="32" font-weight="780">Closed-loop rollout closes only the first loop</text>
+    <text x="60" y="101" fill="#697487" font-size="18">A simulator can model policy feedback while the consequential research decision remains unaudited.</text>
+
+    <g transform="translate(60 135)" filter="url(#shadow)">
+      <rect width="470" height="474" rx="30" fill="#ffffff"/>
+      <rect width="470" height="9" rx="5" fill="#168d89"/>
+      <text x="28" y="50" fill="#137873" font-size="15" font-weight="780" letter-spacing="1.55">1 · POLICY–ENVIRONMENT LOOP</text>
+      <text x="28" y="80" fill="#334157" font-size="20" font-weight="720">What does the policy do in simulation?</text>
+
+      <g transform="translate(35 126)">
+        <rect width="154" height="82" rx="21" fill="#e8f5f3"/>
+        <text x="77" y="35" text-anchor="middle" fill="#137873" font-size="18" font-weight="750">Observation</text>
+        <text x="77" y="59" text-anchor="middle" fill="#4b7371" font-size="15">rendered state</text>
+
+        <path d="M166 41 H216" fill="none" stroke="#168d89" stroke-width="3" marker-end="url(#arrowTeal)"/>
+
+        <rect x="228" width="154" height="82" rx="21" fill="#e8f5f3"/>
+        <text x="305" y="35" text-anchor="middle" fill="#137873" font-size="18" font-weight="750">Policy</text>
+        <text x="305" y="59" text-anchor="middle" fill="#4b7371" font-size="15">frozen identity</text>
+
+        <path d="M305 94 V142" fill="none" stroke="#168d89" stroke-width="3" marker-end="url(#arrowTeal)"/>
+
+        <rect x="228" y="154" width="154" height="82" rx="21" fill="#e8f5f3"/>
+        <text x="305" y="189" text-anchor="middle" fill="#137873" font-size="18" font-weight="750">Action</text>
+        <text x="305" y="213" text-anchor="middle" fill="#4b7371" font-size="15">decoded control</text>
+
+        <path d="M216 195 H166" fill="none" stroke="#168d89" stroke-width="3" marker-end="url(#arrowTeal)"/>
+
+        <rect y="154" width="154" height="82" rx="21" fill="#e8f5f3"/>
+        <text x="77" y="189" text-anchor="middle" fill="#137873" font-size="18" font-weight="750">Simulated world</text>
+        <text x="77" y="213" text-anchor="middle" fill="#4b7371" font-size="15">physics + rendering</text>
+
+        <path d="M77 144 V95" fill="none" stroke="#168d89" stroke-width="3" stroke-dasharray="7 7" marker-end="url(#arrowTeal)"/>
+      </g>
+
+      <rect x="28" y="395" width="414" height="51" rx="17" fill="#f0f7f6" stroke="#cae5e2"/>
+      <text x="235" y="417" text-anchor="middle" fill="#326a67" font-size="15" font-weight="690">Closed-loop evidence exposes compounding behavior</text>
+      <text x="235" y="437" text-anchor="middle" fill="#617c7a" font-size="14">inside the simulated world.</text>
+    </g>
+
+    <g transform="translate(565 135)" filter="url(#shadow)">
+      <rect width="575" height="474" rx="30" fill="#ffffff"/>
+      <rect width="575" height="9" rx="5" fill="#6f5bd3"/>
+      <text x="28" y="50" fill="#5b4bb5" font-size="15" font-weight="780" letter-spacing="1.55">2 · RESEARCH-DECISION LOOP</text>
+      <text x="28" y="80" fill="#334157" font-size="20" font-weight="720">What may the organization do with the score?</text>
+
+      <g transform="translate(26 122)">
+        <g transform="translate(0 0)">
+          <circle cx="22" cy="20" r="17" fill="#26374f"/>
+          <circle cx="48" cy="20" r="17" fill="#364967"/>
+          <circle cx="74" cy="20" r="17" fill="#4a5e7d"/>
+          <text x="48" y="57" text-anchor="middle" fill="#586579" font-size="13" font-weight="700">finite policies</text>
+        </g>
+
+        <path d="M92 20 H126" fill="none" stroke="#6f5bd3" stroke-width="3" marker-end="url(#arrowPurple)"/>
+
+        <g transform="translate(138 0)">
+          <rect width="118" height="74" rx="19" fill="#f0edf9"/>
+          <text x="59" y="31" text-anchor="middle" fill="#5b4bb5" font-size="16" font-weight="750">Protected</text>
+          <text x="59" y="52" text-anchor="middle" fill="#655d8d" font-size="15">simulation</text>
+        </g>
+
+        <path d="M266 37 H300" fill="none" stroke="#6f5bd3" stroke-width="3" marker-end="url(#arrowPurple)"/>
+
+        <g transform="translate(312 0)">
+          <rect width="114" height="74" rx="19" fill="#fff5de" stroke="#e8c477"/>
+          <text x="57" y="30" text-anchor="middle" fill="#916315" font-size="16" font-weight="760">Choose</text>
+          <text x="57" y="52" text-anchor="middle" fill="#916315" font-size="15">or abstain</text>
+        </g>
+
+        <path d="M436 37 H468" fill="none" stroke="#d69a37" stroke-width="3" marker-end="url(#arrowAmber)"/>
+
+        <g transform="translate(480 0)">
+          <rect width="43" height="74" rx="17" fill="url(#navy)"/>
+          <path d="M13 34 H30 V57 H13 Z M17 34 V28 C17 18 27 18 27 28 V34" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round"/>
+        </g>
+
+        <path d="M501 82 V126" fill="none" stroke="#d69a37" stroke-width="3" marker-end="url(#arrowAmber)"/>
+
+        <line x1="0" y1="116" x2="523" y2="116" stroke="#d75d55" stroke-width="2" stroke-dasharray="8 7"/>
+        <rect x="151" y="101" width="221" height="30" rx="15" fill="#fff0ed"/>
+        <text x="261.5" y="121" text-anchor="middle" fill="#aa4742" font-size="13" font-weight="770" letter-spacing=".6">PROTECTED REALITY BOUNDARY</text>
+
+        <g transform="translate(42 153)">
+          <rect width="150" height="76" rx="20" fill="#fdecea"/>
+          <text x="75" y="31" text-anchor="middle" fill="#a64642" font-size="16" font-weight="760">Protected real</text>
+          <text x="75" y="53" text-anchor="middle" fill="#8d5d5a" font-size="15">evidence</text>
+        </g>
+
+        <path d="M202 191 H264" fill="none" stroke="#d75d55" stroke-width="3" marker-end="url(#arrowAmber)"/>
+
+        <g transform="translate(276 153)">
+          <rect width="174" height="76" rx="20" fill="#eef1f5"/>
+          <text x="87" y="31" text-anchor="middle" fill="#3d4b60" font-size="16" font-weight="760">Audit unchanged</text>
+          <text x="87" y="53" text-anchor="middle" fill="#687588" font-size="15">action + consequence</text>
+        </g>
+
+        <path d="M492 140 C480 196 470 218 450 246" fill="none" stroke="#d69a37" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arrowAmber)"/>
+
+        <text x="261" y="276" text-anchor="middle" fill="#687588" font-size="14">Reality evaluates the sealed action; it does not rewrite it.</text>
+      </g>
+    </g>
+
+    <g transform="translate(151 655)">
+      <rect width="898" height="85" rx="25" fill="url(#navy)"/>
+      <circle cx="42" cy="42" r="10" fill="#168d89"/>
+      <circle cx="856" cy="42" r="10" fill="#d69a37"/>
+      <text x="449" y="37" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="760">Closed-loop rollout does not close the organizational decision loop.</text>
+      <text x="449" y="62" text-anchor="middle" fill="#c5ceda" font-size="16">One explains simulated behavior; the other justifies a real commitment.</text>
+    </g>
+  </g>
+</svg>
