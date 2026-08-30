@@ -1,6 +1,6 @@
 ---
 title: "Can Simulation Tell Us Which Robot Policy Will Work in Reality?"
-date: 2026-08-30 22:30:00 +0800
+date: 2026-08-30 17:50:10 +0800
 categories: [Robotics, Simulation]
 tags: [robotics, simulation, vla, evaluation, sim-to-real, policy-selection, genesis-world]
 math: true
